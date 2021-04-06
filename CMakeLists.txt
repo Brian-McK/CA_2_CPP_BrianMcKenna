@@ -3,4 +3,4 @@ project(CA2_Brian_McKenna)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(CA2_Brian_McKenna main.cpp Bug.cpp Bug.h)
+add_executable(CA2_Brian_McKenna main.cpp Bug.cpp Bug.h Crawler.cpp Crawler.h)

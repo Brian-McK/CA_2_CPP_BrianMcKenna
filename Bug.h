@@ -40,7 +40,8 @@ public:
     void setAlive(bool alive);
     void setPath(const list<pair<int, int>> &path);
 
-//    virtual move(){};
+    virtual void move() = 0;
+    virtual ~Bug();
 //    bool isWayBlocked(){};
 };
 

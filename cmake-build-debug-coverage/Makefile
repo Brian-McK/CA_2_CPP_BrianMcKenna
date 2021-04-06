@@ -71,7 +71,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = "/Users/brianmckenna/Documents/College/Software Development/Year 2/C++/Programs/CA2_Brian_McKenna"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/Users/brianmckenna/Documents/College/Software Development/Year 2/C++/Programs/CA2_Brian_McKenna/cmake-build-debug"
+CMAKE_BINARY_DIR = "/Users/brianmckenna/Documents/College/Software Development/Year 2/C++/Programs/CA2_Brian_McKenna/cmake-build-debug-coverage"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -100,9 +100,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/brianmckenna/Documents/College/Software Development/Year 2/C++/Programs/CA2_Brian_McKenna/cmake-build-debug/CMakeFiles" "/Users/brianmckenna/Documents/College/Software Development/Year 2/C++/Programs/CA2_Brian_McKenna/cmake-build-debug/CMakeFiles/progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/brianmckenna/Documents/College/Software Development/Year 2/C++/Programs/CA2_Brian_McKenna/cmake-build-debug-coverage/CMakeFiles" "/Users/brianmckenna/Documents/College/Software Development/Year 2/C++/Programs/CA2_Brian_McKenna/cmake-build-debug-coverage/CMakeFiles/progress.marks"
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/brianmckenna/Documents/College/Software Development/Year 2/C++/Programs/CA2_Brian_McKenna/cmake-build-debug/CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/brianmckenna/Documents/College/Software Development/Year 2/C++/Programs/CA2_Brian_McKenna/cmake-build-debug-coverage/CMakeFiles" 0
 .PHONY : all
 
 # The main clean target

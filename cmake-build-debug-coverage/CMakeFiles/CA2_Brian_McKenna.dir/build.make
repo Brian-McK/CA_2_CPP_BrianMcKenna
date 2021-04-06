@@ -66,7 +66,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = "/Users/brianmckenna/Documents/College/Software Development/Year 2/C++/Programs/CA2_Brian_McKenna"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/Users/brianmckenna/Documents/College/Software Development/Year 2/C++/Programs/CA2_Brian_McKenna/cmake-build-debug"
+CMAKE_BINARY_DIR = "/Users/brianmckenna/Documents/College/Software Development/Year 2/C++/Programs/CA2_Brian_McKenna/cmake-build-debug-coverage"
 
 # Include any dependencies generated for this target.
 include CMakeFiles/CA2_Brian_McKenna.dir/depend.make
@@ -79,7 +79,7 @@ include CMakeFiles/CA2_Brian_McKenna.dir/flags.make
 
 CMakeFiles/CA2_Brian_McKenna.dir/main.cpp.o: CMakeFiles/CA2_Brian_McKenna.dir/flags.make
 CMakeFiles/CA2_Brian_McKenna.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/brianmckenna/Documents/College/Software Development/Year 2/C++/Programs/CA2_Brian_McKenna/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/CA2_Brian_McKenna.dir/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/brianmckenna/Documents/College/Software Development/Year 2/C++/Programs/CA2_Brian_McKenna/cmake-build-debug-coverage/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/CA2_Brian_McKenna.dir/main.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CA2_Brian_McKenna.dir/main.cpp.o -c "/Users/brianmckenna/Documents/College/Software Development/Year 2/C++/Programs/CA2_Brian_McKenna/main.cpp"
 
 CMakeFiles/CA2_Brian_McKenna.dir/main.cpp.i: cmake_force
@@ -92,7 +92,7 @@ CMakeFiles/CA2_Brian_McKenna.dir/main.cpp.s: cmake_force
 
 CMakeFiles/CA2_Brian_McKenna.dir/Bug.cpp.o: CMakeFiles/CA2_Brian_McKenna.dir/flags.make
 CMakeFiles/CA2_Brian_McKenna.dir/Bug.cpp.o: ../Bug.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/brianmckenna/Documents/College/Software Development/Year 2/C++/Programs/CA2_Brian_McKenna/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/CA2_Brian_McKenna.dir/Bug.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/brianmckenna/Documents/College/Software Development/Year 2/C++/Programs/CA2_Brian_McKenna/cmake-build-debug-coverage/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/CA2_Brian_McKenna.dir/Bug.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CA2_Brian_McKenna.dir/Bug.cpp.o -c "/Users/brianmckenna/Documents/College/Software Development/Year 2/C++/Programs/CA2_Brian_McKenna/Bug.cpp"
 
 CMakeFiles/CA2_Brian_McKenna.dir/Bug.cpp.i: cmake_force
@@ -105,7 +105,7 @@ CMakeFiles/CA2_Brian_McKenna.dir/Bug.cpp.s: cmake_force
 
 CMakeFiles/CA2_Brian_McKenna.dir/Crawler.cpp.o: CMakeFiles/CA2_Brian_McKenna.dir/flags.make
 CMakeFiles/CA2_Brian_McKenna.dir/Crawler.cpp.o: ../Crawler.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/brianmckenna/Documents/College/Software Development/Year 2/C++/Programs/CA2_Brian_McKenna/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/CA2_Brian_McKenna.dir/Crawler.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/brianmckenna/Documents/College/Software Development/Year 2/C++/Programs/CA2_Brian_McKenna/cmake-build-debug-coverage/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/CA2_Brian_McKenna.dir/Crawler.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CA2_Brian_McKenna.dir/Crawler.cpp.o -c "/Users/brianmckenna/Documents/College/Software Development/Year 2/C++/Programs/CA2_Brian_McKenna/Crawler.cpp"
 
 CMakeFiles/CA2_Brian_McKenna.dir/Crawler.cpp.i: cmake_force
@@ -130,7 +130,7 @@ CA2_Brian_McKenna: CMakeFiles/CA2_Brian_McKenna.dir/Bug.cpp.o
 CA2_Brian_McKenna: CMakeFiles/CA2_Brian_McKenna.dir/Crawler.cpp.o
 CA2_Brian_McKenna: CMakeFiles/CA2_Brian_McKenna.dir/build.make
 CA2_Brian_McKenna: CMakeFiles/CA2_Brian_McKenna.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/Users/brianmckenna/Documents/College/Software Development/Year 2/C++/Programs/CA2_Brian_McKenna/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable CA2_Brian_McKenna"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/Users/brianmckenna/Documents/College/Software Development/Year 2/C++/Programs/CA2_Brian_McKenna/cmake-build-debug-coverage/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable CA2_Brian_McKenna"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/CA2_Brian_McKenna.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -143,6 +143,6 @@ CMakeFiles/CA2_Brian_McKenna.dir/clean:
 .PHONY : CMakeFiles/CA2_Brian_McKenna.dir/clean
 
 CMakeFiles/CA2_Brian_McKenna.dir/depend:
-	cd "/Users/brianmckenna/Documents/College/Software Development/Year 2/C++/Programs/CA2_Brian_McKenna/cmake-build-debug" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/Users/brianmckenna/Documents/College/Software Development/Year 2/C++/Programs/CA2_Brian_McKenna" "/Users/brianmckenna/Documents/College/Software Development/Year 2/C++/Programs/CA2_Brian_McKenna" "/Users/brianmckenna/Documents/College/Software Development/Year 2/C++/Programs/CA2_Brian_McKenna/cmake-build-debug" "/Users/brianmckenna/Documents/College/Software Development/Year 2/C++/Programs/CA2_Brian_McKenna/cmake-build-debug" "/Users/brianmckenna/Documents/College/Software Development/Year 2/C++/Programs/CA2_Brian_McKenna/cmake-build-debug/CMakeFiles/CA2_Brian_McKenna.dir/DependInfo.cmake" --color=$(COLOR)
+	cd "/Users/brianmckenna/Documents/College/Software Development/Year 2/C++/Programs/CA2_Brian_McKenna/cmake-build-debug-coverage" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/Users/brianmckenna/Documents/College/Software Development/Year 2/C++/Programs/CA2_Brian_McKenna" "/Users/brianmckenna/Documents/College/Software Development/Year 2/C++/Programs/CA2_Brian_McKenna" "/Users/brianmckenna/Documents/College/Software Development/Year 2/C++/Programs/CA2_Brian_McKenna/cmake-build-debug-coverage" "/Users/brianmckenna/Documents/College/Software Development/Year 2/C++/Programs/CA2_Brian_McKenna/cmake-build-debug-coverage" "/Users/brianmckenna/Documents/College/Software Development/Year 2/C++/Programs/CA2_Brian_McKenna/cmake-build-debug-coverage/CMakeFiles/CA2_Brian_McKenna.dir/DependInfo.cmake" --color=$(COLOR)
 .PHONY : CMakeFiles/CA2_Brian_McKenna.dir/depend
 

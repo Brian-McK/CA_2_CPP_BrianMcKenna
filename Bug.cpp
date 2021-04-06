@@ -1,14 +1,14 @@
 //
 // Created by Brian McKenna on 02/04/2021.
 //
+#include <iostream>
 #include "Bug.h"
 
 // default constructor
 Bug::Bug() {
-    id = 0;
 }
 
-// none default constructor
+// non default constructor
 Bug::Bug(int id, const pair<int, int> &position, int direction, int size, bool alive,
          const list<pair<int, int>> &path) {
     this->id = id;
@@ -67,4 +67,7 @@ void Bug::setPath(const list<pair<int, int>> &path) {
     Bug::path = path;
 }
 
+Bug::~Bug() {
+    cout << "~Bug() called. Base destructor is called after derived destructor.\n";
+}
 
