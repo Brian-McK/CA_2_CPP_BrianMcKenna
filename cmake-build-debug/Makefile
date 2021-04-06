@@ -197,6 +197,33 @@ Crawler.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CA2_Brian_McKenna.dir/build.make CMakeFiles/CA2_Brian_McKenna.dir/Crawler.cpp.s
 .PHONY : Crawler.cpp.s
 
+Hopper.o: Hopper.cpp.o
+
+.PHONY : Hopper.o
+
+# target to build an object file
+Hopper.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CA2_Brian_McKenna.dir/build.make CMakeFiles/CA2_Brian_McKenna.dir/Hopper.cpp.o
+.PHONY : Hopper.cpp.o
+
+Hopper.i: Hopper.cpp.i
+
+.PHONY : Hopper.i
+
+# target to preprocess a source file
+Hopper.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CA2_Brian_McKenna.dir/build.make CMakeFiles/CA2_Brian_McKenna.dir/Hopper.cpp.i
+.PHONY : Hopper.cpp.i
+
+Hopper.s: Hopper.cpp.s
+
+.PHONY : Hopper.s
+
+# target to generate assembly for a file
+Hopper.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CA2_Brian_McKenna.dir/build.make CMakeFiles/CA2_Brian_McKenna.dir/Hopper.cpp.s
+.PHONY : Hopper.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -239,6 +266,9 @@ help:
 	@echo "... Crawler.o"
 	@echo "... Crawler.i"
 	@echo "... Crawler.s"
+	@echo "... Hopper.o"
+	@echo "... Hopper.i"
+	@echo "... Hopper.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

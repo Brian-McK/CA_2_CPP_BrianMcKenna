@@ -92,6 +92,12 @@
 		<Unit filename="/Users/brianmckenna/Documents/College/Software Development/Year 2/C++/Programs/CA2_Brian_McKenna/Crawler.h">
 			<Option target="CA2_Brian_McKenna"/>
 		</Unit>
+		<Unit filename="/Users/brianmckenna/Documents/College/Software Development/Year 2/C++/Programs/CA2_Brian_McKenna/Hopper.cpp">
+			<Option target="CA2_Brian_McKenna"/>
+		</Unit>
+		<Unit filename="/Users/brianmckenna/Documents/College/Software Development/Year 2/C++/Programs/CA2_Brian_McKenna/Hopper.h">
+			<Option target="CA2_Brian_McKenna"/>
+		</Unit>
 		<Unit filename="/Users/brianmckenna/Documents/College/Software Development/Year 2/C++/Programs/CA2_Brian_McKenna/main.cpp">
 			<Option target="CA2_Brian_McKenna"/>
 		</Unit>

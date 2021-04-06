@@ -6,10 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/Users/brianmckenna/Documents/College/Software Development/Year 2/C++/Programs/CA2_Brian_McKenna/Bug.cpp
-Bug.h
-/Users/brianmckenna/Documents/College/Software Development/Year 2/C++/Programs/CA2_Brian_McKenna/Bug.h
-
 /Users/brianmckenna/Documents/College/Software Development/Year 2/C++/Programs/CA2_Brian_McKenna/Bug.h
 string
 -
@@ -18,9 +14,27 @@ utility
 list
 -
 
+/Users/brianmckenna/Documents/College/Software Development/Year 2/C++/Programs/CA2_Brian_McKenna/Crawler.cpp
+Crawler.h
+/Users/brianmckenna/Documents/College/Software Development/Year 2/C++/Programs/CA2_Brian_McKenna/Crawler.h
+iostream
+-
+
+/Users/brianmckenna/Documents/College/Software Development/Year 2/C++/Programs/CA2_Brian_McKenna/Crawler.h
+Bug.h
+/Users/brianmckenna/Documents/College/Software Development/Year 2/C++/Programs/CA2_Brian_McKenna/Bug.h
+
+/Users/brianmckenna/Documents/College/Software Development/Year 2/C++/Programs/CA2_Brian_McKenna/Hopper.h
+Bug.h
+/Users/brianmckenna/Documents/College/Software Development/Year 2/C++/Programs/CA2_Brian_McKenna/Bug.h
+
 /Users/brianmckenna/Documents/College/Software Development/Year 2/C++/Programs/CA2_Brian_McKenna/main.cpp
 iostream
 -
 Bug.h
 /Users/brianmckenna/Documents/College/Software Development/Year 2/C++/Programs/CA2_Brian_McKenna/Bug.h
+Hopper.h
+/Users/brianmckenna/Documents/College/Software Development/Year 2/C++/Programs/CA2_Brian_McKenna/Hopper.h
+Crawler.h
+/Users/brianmckenna/Documents/College/Software Development/Year 2/C++/Programs/CA2_Brian_McKenna/Crawler.h
 

@@ -6,9 +6,9 @@
 #include <iostream>
 using namespace std;
 
-void move() {	// implementation of move()
-    cout << "moving the Crawler...\ndone moving." << endl;
+void Crawler::move() {
+    cout << "Moving the Crawler...\nDone Moving." << endl;
 }
-Crawler::~Crawler() noexcept {
+Crawler::~Crawler() {
     cout << "~Crawler() destructor called.\n";
 }

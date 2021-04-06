@@ -71,3 +71,5 @@ Bug::~Bug() {
     cout << "~Bug() called. Base destructor is called after derived destructor.\n";
 }
 
+
+

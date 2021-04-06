@@ -1,12 +1,22 @@
 #include <iostream>
 #include "Bug.h"
+#include "Hopper.h"
+#include "Crawler.h"
+
 
 void menu();
 
 using namespace std;
 
 int main() {
-    menu();
+    Hopper *myHopper;
+
+    myHopper->setId(1234);
+    myHopper->setAlive(true);
+    myHopper->setPosition(pair<int, int>(10,10));
+
+    cout << "ID: " << myHopper->getId();
+
     return 0;
 }
 
