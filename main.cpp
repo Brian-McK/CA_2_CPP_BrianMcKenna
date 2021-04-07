@@ -2,6 +2,7 @@
 #include "Bug.h"
 #include "Hopper.h"
 #include "Crawler.h"
+#include <vector>
 
 
 void menu();
@@ -9,14 +10,21 @@ void menu();
 using namespace std;
 
 int main() {
-    Hopper *myHopper;
+    Hopper myHopper;
 
-    myHopper->setId(1234);
-    myHopper->setAlive(true);
-    myHopper->setPosition(pair<int, int>(10,10));
+    myHopper.setId(1234);
+    myHopper.setAlive(true);
+    myHopper.setPosition(pair<int, int>(20,10));
 
-    cout << "ID: " << myHopper->getId();
+    cout << "myHopper ID: " << myHopper.getId() << endl;
 
+    cout << "Coordinates for: myHopper(x,y): (" << myHopper.getPosition().first << "," << myHopper.getPosition().second << ")\n";
+
+    // try to move the hopper e.g myHopper.move(direction,)
+
+    myHopper.move();
+
+    cout << "Coordinates for: myHopper(x,y): (" << myHopper.getPosition().first << "," << myHopper.getPosition().second << ")\n";
     return 0;
 }
 

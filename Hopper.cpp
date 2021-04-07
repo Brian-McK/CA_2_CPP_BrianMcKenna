@@ -6,6 +6,10 @@
 #include <iostream>
 using namespace std;
 
+Hopper::Hopper(int hopLength) : hopLength(hopLength) {
+    this->hopLength = hopLength;
+}
+
 void Hopper::move() {
     cout << "Moving the Hopper...\nDone Moving." << endl;
 }
@@ -20,4 +24,7 @@ int Hopper::getHopLength() const {
 
 void Hopper::setHopLength(int hopLength) {
     Hopper::hopLength = hopLength;
+}
+
+Hopper::Hopper() {
 }

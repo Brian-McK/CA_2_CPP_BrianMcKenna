@@ -10,7 +10,7 @@
 class Crawler: public Bug {
 public:
     ~Crawler();
-    void move();
+    virtual void move();
 };
 
 #endif //CA2_BRIAN_MCKENNA_CRAWLER_H
