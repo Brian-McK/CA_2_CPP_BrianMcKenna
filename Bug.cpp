@@ -20,6 +20,17 @@ Bug::Bug(int id, const pair<int, int> &position, int direction, int size, bool a
     this->hopLength = hopLength;
 }
 
+Bug::Bug(int id, const pair<int, int> &position, int direction, int size, bool alive,
+         const list<pair<int, int>> &path) {
+    this->id = id;
+    this->position = position;
+    this->direction = direction;
+    this->size = size;
+    this->alive = alive;
+    this->path = path;
+    this->hopLength = 0;
+}
+
 int Bug::getId() const {
     return id;
 }
@@ -79,6 +90,8 @@ void Bug::setHopLength(int hopLength) {
 Bug::~Bug() {
     cout << "~Bug() called. Base destructor is called after derived destructor.\n";
 }
+
+
 
 
 

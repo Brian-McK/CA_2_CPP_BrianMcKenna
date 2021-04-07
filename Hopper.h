@@ -10,16 +10,10 @@
 
 using namespace std;
 
-
 class Hopper: public Bug {
-private:
-    int hopLength;
 public:
-    Hopper(int hopLength);
-    int getHopLength() const;
-    void setHopLength(int hopLength);
-    ~Hopper();
     void move();
+    ~Hopper();
     Hopper();
 };
 

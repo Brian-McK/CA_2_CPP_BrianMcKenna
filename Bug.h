@@ -19,9 +19,16 @@ private:
     int size;
     bool alive;
     list<pair<int, int>> path;
-    int hopLength;
+    int hopLength{};
 public:
     Bug();
+    Bug(int id,
+        const pair<int, int> &position,
+        int direction,
+        int size,
+        bool alive,
+        const list<pair<int, int>> &path);
+
     Bug(int id,
         const pair<int, int> &position,
         int direction,

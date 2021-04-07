@@ -9,6 +9,10 @@ using namespace std;
 void Crawler::move() {
     cout << "Moving the Crawler...\nDone Moving." << endl;
 }
+
 Crawler::~Crawler() {
     cout << "~Crawler() destructor called.\n";
+}
+
+Crawler::Crawler() {
 }

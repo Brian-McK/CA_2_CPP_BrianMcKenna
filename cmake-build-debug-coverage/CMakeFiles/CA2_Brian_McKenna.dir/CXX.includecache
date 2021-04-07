@@ -6,12 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/Users/brianmckenna/Documents/College/Software Development/Year 2/C++/Programs/CA2_Brian_McKenna/Bug.cpp
-iostream
--
-Bug.h
-/Users/brianmckenna/Documents/College/Software Development/Year 2/C++/Programs/CA2_Brian_McKenna/Bug.h
-
 /Users/brianmckenna/Documents/College/Software Development/Year 2/C++/Programs/CA2_Brian_McKenna/Bug.h
 string
 -
