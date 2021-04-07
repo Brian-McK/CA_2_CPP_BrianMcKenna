@@ -6,6 +6,8 @@
 #include <string>
 #include <utility>
 #include <list>
+#include <iostream>
+#pragma once
 
 using namespace std;
 
@@ -17,6 +19,7 @@ private:
     int size;
     bool alive;
     list<pair<int, int>> path;
+    int hopLength;
 public:
     Bug();
     Bug(int id,
@@ -24,7 +27,8 @@ public:
         int direction,
         int size,
         bool alive,
-        const list<pair<int, int>> &path);
+        const list<pair<int, int>> &path,
+        int hopLength);
 
     int getId() const;
     const pair<int, int> &getPosition() const;
@@ -33,16 +37,20 @@ public:
     bool isAlive() const;
     const list<pair<int, int>> &getPath() const;
 
+    int getHopLength() const;
+
     void setId(int id);
     void setPosition(const pair<int, int> &position);
     void setDirection(int direction);
     void setSize(int size);
     void setAlive(bool alive);
     void setPath(const list<pair<int, int>> &path);
-
+//    bool isWayBlocked(){};
     virtual void move() = 0;
     virtual ~Bug();
-//    bool isWayBlocked(){};
+
+    void setHopLength(int i);
+
 };
 
 

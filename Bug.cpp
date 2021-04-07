@@ -10,13 +10,14 @@ Bug::Bug() {
 
 // non default constructor
 Bug::Bug(int id, const pair<int, int> &position, int direction, int size, bool alive,
-         const list<pair<int, int>> &path) {
+         const list<pair<int, int>> &path, int hopLength) {
     this->id = id;
     this->position = position;
     this->direction = direction;
     this->size = size;
     this->alive = alive;
     this->path = path;
+    this->hopLength = hopLength;
 }
 
 int Bug::getId() const {
@@ -43,6 +44,10 @@ const list<pair<int, int>> &Bug::getPath() const {
     return path;
 }
 
+int Bug::getHopLength() const {
+    return hopLength;
+}
+
 void Bug::setId(int id) {
     Bug::id = id;
 }
@@ -67,9 +72,17 @@ void Bug::setPath(const list<pair<int, int>> &path) {
     Bug::path = path;
 }
 
+void Bug::setHopLength(int hopLength) {
+    Bug::hopLength = hopLength;
+}
+
 Bug::~Bug() {
     cout << "~Bug() called. Base destructor is called after derived destructor.\n";
 }
+
+
+
+
 
 
 
