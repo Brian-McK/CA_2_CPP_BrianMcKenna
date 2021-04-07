@@ -11,10 +11,17 @@
 using namespace std;
 
 class Hopper: public Bug {
+private:
+    int hopLength;
 public:
+    int getHopLength() const;
+    void setHopLength(int hopLength);
     void move();
     ~Hopper();
     Hopper();
+
+    Hopper(int id, const pair<int, int> &position, int direction, int size, bool alive,
+           const list<pair<int, int>> &path, int hopLength);
 };
 
 

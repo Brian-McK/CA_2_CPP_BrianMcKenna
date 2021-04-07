@@ -6,6 +6,12 @@
 #include <iostream>
 using namespace std;
 
+Hopper::Hopper(int id, const pair<int, int> &position, int direction, int size, bool alive,
+               const list<pair<int, int>> &path, int hopLength) : Bug(id, position, direction, size, alive, path),
+                                                                  hopLength(hopLength) {
+    this->hopLength = hopLength;
+}
+
 void Hopper::move() {
     cout << "Moving the Hopper...\nDone Moving." << endl;
 }
@@ -15,4 +21,12 @@ Hopper::~Hopper() {
 }
 
 Hopper::Hopper() {
+}
+
+int Hopper::getHopLength() const {
+    return hopLength;
+}
+
+void Hopper::setHopLength(int hopLength) {
+    Hopper::hopLength = hopLength;
 }

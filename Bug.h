@@ -19,7 +19,6 @@ private:
     int size;
     bool alive;
     list<pair<int, int>> path;
-    int hopLength{};
 public:
     Bug();
     Bug(int id,
@@ -29,22 +28,12 @@ public:
         bool alive,
         const list<pair<int, int>> &path);
 
-    Bug(int id,
-        const pair<int, int> &position,
-        int direction,
-        int size,
-        bool alive,
-        const list<pair<int, int>> &path,
-        int hopLength);
-
     int getId() const;
     const pair<int, int> &getPosition() const;
     int getDirection() const;
     int getSize() const;
     bool isAlive() const;
     const list<pair<int, int>> &getPath() const;
-
-    int getHopLength() const;
 
     void setId(int id);
     void setPosition(const pair<int, int> &position);
@@ -57,7 +46,6 @@ public:
     virtual ~Bug();
 
     void setHopLength(int i);
-
 };
 
 
