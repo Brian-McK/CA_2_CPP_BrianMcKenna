@@ -3,11 +3,14 @@
 #include "Hopper.h"
 #include "Crawler.h"
 #include <list>
-#include <fstream>
+#include <fstream>      // file stream
+#include <string>       // getline(), stoi(), stod()
+#include <sstream>      // string stream
 
 
 void menu();
-void readFromFile(list<int> &numbers, const string& fileName);
+void parseLine(const string& str);
+void DemoInputFileStream(const string& fileName);
 
 using namespace std;
 
@@ -30,9 +33,7 @@ int main() {
 
     myHopper.move();
 
-    list<int> numbers;
-
-    readFromFile(numbers, "bugs.txt");
+    DemoInputFileStream("students.txt");
 
     return 0;
 }
@@ -58,23 +59,61 @@ void menu()
 
 }
 
-void readFromFile(list<int> &numbers, const string& fileName)
-{
-    ifstream in(fileName);
-    if(in)
-    {
-        cout << "read from file";
+void DemoInputFileStream(const string& fileName) {
+    cout << "Reading from comma-delimited text file." << endl;
 
-        while (!in.eof())
+    string line;
+    ifstream inStream(fileName); // open file as input file stream
+
+    if ( inStream.good() )  // if file opened successfully, and not empty
+    {
+        while ( getline( inStream, line) )   // read a line until false returned , getLine() from <string> library
         {
-            string input;
-            int num;
-            getline(in, input, ';');
-            num = stoi(input);
-            numbers.push_back(num);
+            parseLine( line );
         }
-        in.close();
-    } else{
-        cout << "Error opening file" << endl;
+        inStream.close();
     }
+    else
+        cout << "Unable to open file, or file is empty.\n";
+}
+
+void parseLine(const string& str) {
+
+    stringstream strStream( str ); //create string stream from the string
+    // ****
+    string bugType;
+    int id;
+    int xCoordinate;
+    int yCoordinate;
+    string direction;
+    int sizeOfBug;
+    int hopLength;
+    // ****
+    string name;
+    getline(strStream, name, ',');
+
+    int age = 0;
+    double height = 0.0;
+
+    try
+    {
+        string str;
+        getline(strStream, str, ',');
+
+        age = stoi(str); // string to int (throws exceptions)
+
+        getline(strStream, str, ',');
+
+        height = stod(str); // string to double (throws exceptions)
+    }
+    catch (std::invalid_argument const& e)
+    {
+        cout << "Bad input: std::invalid_argument thrown" << '\n';
+    }
+    catch (std::out_of_range const& e)
+    {
+        cout << "Integer overflow: std::out_of_range thrown" << '\n';
+    }
+
+    cout << "Name: " << name << " age: " << age << " height: " << height << endl;
 }
