@@ -33,7 +33,7 @@ int main() {
 
     myHopper.move();
 
-    DemoInputFileStream("students.txt");
+    DemoInputFileStream("bugs.txt");
 
     return 0;
 }
@@ -60,7 +60,7 @@ void menu()
 }
 
 void DemoInputFileStream(const string& fileName) {
-    cout << "Reading from comma-delimited text file." << endl;
+    cout << "Reading from semi-colon delimited text file." << endl;
 
     string line;
     ifstream inStream(fileName); // open file as input file stream
@@ -82,29 +82,38 @@ void parseLine(const string& str) {
     stringstream strStream( str ); //create string stream from the string
     // ****
     string bugType;
-    int id;
-    int xCoordinate;
-    int yCoordinate;
-    string direction;
-    int sizeOfBug;
-    int hopLength;
+    int id = 0;
+    int xCoordinate = 0;
+    int yCoordinate = 0;
+    int direction = 0;
+    int sizeOfBug = 0;
+    int hopLength = 0;
     // ****
-    string name;
-    getline(strStream, name, ',');
-
-    int age = 0;
-    double height = 0.0;
 
     try
     {
         string str;
-        getline(strStream, str, ',');
 
-        age = stoi(str); // string to int (throws exceptions)
+        getline(strStream, str, ';');
+        bugType = str;
 
-        getline(strStream, str, ',');
+        getline(strStream, str, ';');
+        id = stoi(str);
 
-        height = stod(str); // string to double (throws exceptions)
+        getline(strStream, str, ';');
+        xCoordinate = stoi(str);
+
+        getline(strStream, str, ';');
+        yCoordinate = stoi(str);
+
+        getline(strStream, str, ';');
+        direction = stoi(str);
+
+        getline(strStream, str, ';');
+        sizeOfBug = stoi(str);
+
+        getline(strStream, str, ';');
+        hopLength = stoi(str);
     }
     catch (std::invalid_argument const& e)
     {
@@ -115,5 +124,7 @@ void parseLine(const string& str) {
         cout << "Integer overflow: std::out_of_range thrown" << '\n';
     }
 
-    cout << "Name: " << name << " age: " << age << " height: " << height << endl;
+    cout << "bugType: " << bugType << " id: " << id << " xCoordinate: " << xCoordinate
+    << " yCoordinate: " << yCoordinate << " direction: " << direction
+    << " sizeOfBug: " << sizeOfBug << " hopLength: " << hopLength << endl;
 }
