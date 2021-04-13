@@ -2,11 +2,14 @@
 #include "Bug.h"
 #include "Hopper.h"
 #include "Crawler.h"
+#include <vector>
 #include <list>
 #include <fstream>      // file stream
 #include <string>       // getline(), stoi(), stod()
 #include <sstream>      // string stream
 
+
+vector<Bug*> bugs;
 
 void menu();
 void parseLine(const string& str);
@@ -15,6 +18,7 @@ void DemoInputFileStream(const string& fileName);
 using namespace std;
 
 int main() {
+
     Hopper myHopper;
     myHopper.setId(1234); // Unique integer ID value (e.g. 101,102,... etc.)
     myHopper.setPosition(pair<int, int>(20,10)); // (X,Y) coordinate system where (0,0) is top left hand cell
@@ -80,15 +84,18 @@ void DemoInputFileStream(const string& fileName) {
 void parseLine(const string& str) {
 
     stringstream strStream( str ); //create string stream from the string
-    // ****
     string bugType;
+
     int id = 0;
     int xCoordinate = 0;
     int yCoordinate = 0;
     int direction = 0;
     int sizeOfBug = 0;
+    bool alive = true;
+    // pathway???
+    list<pair<int, int>> path;
+    path.push_back(pair<int, int>(xCoordinate,yCoordinate));
     int hopLength = 0;
-    // ****
 
     try
     {
@@ -112,8 +119,14 @@ void parseLine(const string& str) {
         getline(strStream, str, ';');
         sizeOfBug = stoi(str);
 
-        getline(strStream, str, ';');
-        hopLength = stoi(str);
+        if(bugType == "H")
+        {
+            getline(strStream, str, ';');
+            hopLength = stoi(str);
+            bugs.push_back(new Hopper(id,pair<int, int>(xCoordinate,yCoordinate),direction,sizeOfBug,alive,path,hopLength));
+        } else {
+            bugs.push_back(new Crawler(id, pair<int, int>(xCoordinate, yCoordinate), direction, sizeOfBug, alive, path));
+        }
     }
     catch (std::invalid_argument const& e)
     {

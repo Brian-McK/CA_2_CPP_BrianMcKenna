@@ -6,6 +6,10 @@
 #include <iostream>
 using namespace std;
 
+Crawler::Crawler() {
+
+}
+
 void Crawler::move() {
     cout << "Moving the Crawler...\nDone Moving." << endl;
 }
@@ -14,5 +18,7 @@ Crawler::~Crawler() {
     cout << "~Crawler() destructor called.\n";
 }
 
-Crawler::Crawler() {
+Crawler::Crawler(int id, const pair<int, int> &position, int direction, int size, bool alive,
+                 const list<pair<int, int>> &path) : Bug(id, position, direction, size, alive, path) {
+
 }

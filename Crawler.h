@@ -11,7 +11,10 @@ class Crawler: public Bug {
 public:
     ~Crawler();
      void move();
-    Crawler();
+     Crawler();
+
+    Crawler(int id, const pair<int, int> &position, int direction, int size, bool alive,
+            const list<pair<int, int>> &path);
 };
 
 #endif //CA2_BRIAN_MCKENNA_CRAWLER_H
