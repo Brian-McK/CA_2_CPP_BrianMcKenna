@@ -143,6 +143,33 @@ CA2_Brian_McKenna/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CA2_Brian_McKenna.dir/build.make CMakeFiles/CA2_Brian_McKenna.dir/build
 .PHONY : CA2_Brian_McKenna/fast
 
+Board.o: Board.cpp.o
+
+.PHONY : Board.o
+
+# target to build an object file
+Board.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CA2_Brian_McKenna.dir/build.make CMakeFiles/CA2_Brian_McKenna.dir/Board.cpp.o
+.PHONY : Board.cpp.o
+
+Board.i: Board.cpp.i
+
+.PHONY : Board.i
+
+# target to preprocess a source file
+Board.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CA2_Brian_McKenna.dir/build.make CMakeFiles/CA2_Brian_McKenna.dir/Board.cpp.i
+.PHONY : Board.cpp.i
+
+Board.s: Board.cpp.s
+
+.PHONY : Board.s
+
+# target to generate assembly for a file
+Board.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CA2_Brian_McKenna.dir/build.make CMakeFiles/CA2_Brian_McKenna.dir/Board.cpp.s
+.PHONY : Board.cpp.s
+
 Bug.o: Bug.cpp.o
 
 .PHONY : Bug.o
@@ -260,6 +287,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... CA2_Brian_McKenna"
+	@echo "... Board.o"
+	@echo "... Board.i"
+	@echo "... Board.s"
 	@echo "... Bug.o"
 	@echo "... Bug.i"
 	@echo "... Bug.s"

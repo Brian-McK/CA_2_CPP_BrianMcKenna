@@ -41,7 +41,7 @@ public:
     void setSize(int size);
     void setAlive(bool alive);
     void setPath(const list<pair<int, int>> &path);
-    bool isWayBlocked(){};
+    bool isWayBlocked();
     virtual void move() = 0;
     virtual ~Bug();
 };

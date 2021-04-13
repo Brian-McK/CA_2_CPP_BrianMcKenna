@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "CA2_Brian_McKenna"
   "CA2_Brian_McKenna.pdb"
+  "CMakeFiles/CA2_Brian_McKenna.dir/Board.cpp.o"
   "CMakeFiles/CA2_Brian_McKenna.dir/Bug.cpp.o"
   "CMakeFiles/CA2_Brian_McKenna.dir/Crawler.cpp.o"
   "CMakeFiles/CA2_Brian_McKenna.dir/Hopper.cpp.o"

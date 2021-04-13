@@ -71,6 +71,18 @@ Bug::~Bug() {
     cout << "~Bug() called. Base destructor is called after derived destructor.\n";
 }
 
+// Checks if a bug is against an edge of the board AND if it is facing in the direction of that edge. If so, its way is blocked.
+//  [Used by the move() function]
+
+bool Bug::isWayBlocked() {
+    if()
+    {
+
+    }
+
+    return false;
+}
+
 
 
 

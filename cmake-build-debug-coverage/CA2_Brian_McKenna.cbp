@@ -80,6 +80,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/brianmckenna/Documents/College/Software Development/Year 2/C++/Programs/CA2_Brian_McKenna/Board.cpp">
+			<Option target="CA2_Brian_McKenna"/>
+		</Unit>
+		<Unit filename="/Users/brianmckenna/Documents/College/Software Development/Year 2/C++/Programs/CA2_Brian_McKenna/Board.h">
+			<Option target="CA2_Brian_McKenna"/>
+		</Unit>
 		<Unit filename="/Users/brianmckenna/Documents/College/Software Development/Year 2/C++/Programs/CA2_Brian_McKenna/Bug.cpp">
 			<Option target="CA2_Brian_McKenna"/>
 		</Unit>
