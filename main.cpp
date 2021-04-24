@@ -159,9 +159,17 @@ void findBug(int findId, vector<Bug*> bugVector)
 {
     cout << "\nFind the bug with id: " << findId << endl;
 
+    bool foundBug = false;
+
     for (auto &i: bugVector){
         if(i->getId() == findId){
+            foundBug = true;
             i->print();
         }
+    }
+
+    if(!foundBug)
+    {
+        cout << "Bug: " << findId << " not found";
     }
 }
