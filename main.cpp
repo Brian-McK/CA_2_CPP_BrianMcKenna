@@ -15,6 +15,7 @@ void menu();
 void parseLine(const string& str);
 void DemoInputFileStream(const string& fileName);
 void displayAllBugs(vector<Bug*> bugVector);
+void findBug(int findId, vector<Bug*> bugVector);
 
 using namespace std;
 
@@ -44,6 +45,8 @@ int main() {
 
     displayAllBugs(bugs);
 
+    findBug(103,bugs);
+
     return 0;
 }
 
@@ -69,7 +72,6 @@ void menu()
 }
 
 void DemoInputFileStream(const string& fileName) {
-    cout << "Reading from semi-colon delimited text file." << endl;
 
     string line;
     ifstream inStream(fileName); // open file as input file stream
@@ -97,7 +99,7 @@ void parseLine(const string& str) {
     int direction = 0;
     int sizeOfBug = 0;
     bool alive = true;
-    // pathway???
+    // pathway??? // TODO
     list<pair<int, int>> path;
     path.push_back(pair<int, int>(xCoordinate,yCoordinate));
     int hopLength = 0;
@@ -155,10 +157,11 @@ void displayAllBugs(vector<Bug*> bugVector)
 
 void findBug(int findId, vector<Bug*> bugVector)
 {
-    cout << "\nDisplay All Bugs" << endl;
+    cout << "\nFind the bug with id: " << findId << endl;
 
-    for (int i = 0; i < bugVector.size(); ++i) {
-        bugVector[i]->print();
-        cout << "," << endl;
+    for (auto &i: bugVector){
+        if(i->getId() == findId){
+            i->print();
+        }
     }
 }
