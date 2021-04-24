@@ -3,6 +3,7 @@
 //
 #include <iostream>
 #include "Bug.h"
+#include "Board.h"
 
 // default constructor
 Bug::Bug() {
@@ -75,12 +76,31 @@ Bug::~Bug() {
 //  [Used by the move() function]
 
 bool Bug::isWayBlocked() {
-    if()
+    if(this->getDirection() == 1) // north
+    {
+
+    }
+    else if(this->getDirection() == 2) // east
+    {
+
+    }
+    else if(this->getDirection() == 3) // south
+    {
+
+    }
+    else if(this->getDirection() == 4) // west
     {
 
     }
 
     return false;
+}
+
+void Bug::print() {
+    cout << "ID: " << id  << ", Position(x: " << position.first << "," << " y:" << position.second << "), "
+    << "direction: " << direction << ", size: " << size << ", alive: " << alive;
+
+    // add in path later
 }
 
 

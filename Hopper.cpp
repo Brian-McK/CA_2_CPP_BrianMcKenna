@@ -30,3 +30,8 @@ int Hopper::getHopLength() const {
 void Hopper::setHopLength(int hopLength) {
     Hopper::hopLength = hopLength;
 }
+
+void Hopper::print() {
+    cout << "Hopper: ";
+    Bug::print(); cout << ", hopLength:" << hopLength;
+}

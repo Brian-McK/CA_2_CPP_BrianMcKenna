@@ -11,6 +11,7 @@ class Crawler: public Bug {
 public:
     ~Crawler();
      void move();
+     void print();
      Crawler();
 
     Crawler(int id, const pair<int, int> &position, int direction, int size, bool alive,

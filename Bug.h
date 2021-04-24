@@ -7,6 +7,8 @@
 #include <utility>
 #include <list>
 #include <iostream>
+#include "Board.h"
+
 #pragma once
 
 using namespace std;
@@ -43,6 +45,7 @@ public:
     void setPath(const list<pair<int, int>> &path);
     bool isWayBlocked();
     virtual void move() = 0;
+    virtual void print();
     virtual ~Bug();
 };
 

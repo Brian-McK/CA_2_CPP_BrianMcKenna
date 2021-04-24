@@ -4,12 +4,9 @@
 
 #include "Board.h"
 
-int Board::getLength() const {
-    return length;
-}
-
-void Board::setLength(int length) {
-    Board::length = length;
+Board::Board(int width, int height) : width(width), height(height) {
+    this->width = width;
+    this->height = height;
 }
 
 int Board::getWidth() const {
@@ -20,7 +17,11 @@ void Board::setWidth(int width) {
     Board::width = width;
 }
 
-Board::Board(int length, int width) : length(length), width(width) {
-    this->length = length;
-    this->width = width;
+int Board::getHeight() const {
+    return height;
 }
+
+void Board::setHeight(int height) {
+    Board::height = height;
+}
+

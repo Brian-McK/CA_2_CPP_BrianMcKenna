@@ -17,6 +17,7 @@ public:
     int getHopLength() const;
     void setHopLength(int hopLength);
     void move();
+    void print();
     ~Hopper();
     Hopper();
 

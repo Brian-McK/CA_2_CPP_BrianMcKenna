@@ -22,3 +22,8 @@ Crawler::Crawler(int id, const pair<int, int> &position, int direction, int size
                  const list<pair<int, int>> &path) : Bug(id, position, direction, size, alive, path) {
 
 }
+
+void Crawler::print() {
+    cout << "Crawler: ";
+    Bug::print();
+}

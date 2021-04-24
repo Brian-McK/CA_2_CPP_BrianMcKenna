@@ -8,18 +8,19 @@
 
 class Board {
 private:
-    int length = 10;
     int width = 10;
+    int height = 10;
 public:
-    int getLength() const;
-
-    void setLength(int length);
 
     int getWidth() const;
 
     void setWidth(int width);
 
-    Board(int length, int width);
+    int getHeight() const;
+
+    void setHeight(int height);
+
+    Board(int width, int height);
 };
 
 

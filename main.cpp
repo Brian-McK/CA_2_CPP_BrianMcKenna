@@ -14,6 +14,7 @@ vector<Bug*> bugs;
 void menu();
 void parseLine(const string& str);
 void DemoInputFileStream(const string& fileName);
+void displayAllBugs(vector<Bug*> bugVector);
 
 using namespace std;
 
@@ -35,9 +36,13 @@ int main() {
 
     // try to move the hopper e.g myHopper.move(direction,)
 
+    myHopper.print();
+
     myHopper.move();
 
     DemoInputFileStream("bugs.txt");
+
+    displayAllBugs(bugs);
 
     return 0;
 }
@@ -136,8 +141,24 @@ void parseLine(const string& str) {
     {
         cout << "Integer overflow: std::out_of_range thrown" << '\n';
     }
+}
 
-    cout << "bugType: " << bugType << " id: " << id << " xCoordinate: " << xCoordinate
-    << " yCoordinate: " << yCoordinate << " direction: " << direction
-    << " sizeOfBug: " << sizeOfBug << " hopLength: " << hopLength << endl;
+void displayAllBugs(vector<Bug*> bugVector)
+{
+    cout << "\nDisplay All Bugs" << endl;
+
+    for (int i = 0; i < bugVector.size(); ++i) {
+        bugVector[i]->print();
+        cout << "," << endl;
+    }
+}
+
+void findBug(int findId, vector<Bug*> bugVector)
+{
+    cout << "\nDisplay All Bugs" << endl;
+
+    for (int i = 0; i < bugVector.size(); ++i) {
+        bugVector[i]->print();
+        cout << "," << endl;
+    }
 }
