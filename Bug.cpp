@@ -69,31 +69,37 @@ void Bug::setPath(const list<pair<int, int>> &path) {
 }
 
 Bug::~Bug() {
-    cout << "~Bug() called. Base destructor is called after derived destructor.\n";
+//    cout << "~Bug() called. Base destructor is called after derived destructor.\n";
 }
 
 // Checks if a bug is against an edge of the board AND if it is facing in the direction of that edge. If so, its way is blocked.
 //  [Used by the move() function]
 
 bool Bug::isWayBlocked() {
-    if(this->getDirection() == 1) // north
+
+    bool isBlocked = false;
+
+    if(this->getDirection() == 1 && this->getPosition().second ==  0) // north
     {
-
+        cout << "\nFacing north";
+        isBlocked = true;
     }
-    else if(this->getDirection() == 2) // east
+    else if(this->getDirection() == 2 && this->getPosition().first ==  9) // east
     {
-
+        cout << "\nFacing East";
+        isBlocked = true;
     }
-    else if(this->getDirection() == 3) // south
+    else if(this->getDirection() == 3 && this->getPosition().second ==  9) // south
     {
-
+        cout << "\nFacing south";
+        isBlocked = true;
     }
-    else if(this->getDirection() == 4) // west
+    else if(this->getDirection() == 4 && this->getPosition().first ==  0) // west
     {
-
+        cout << "\nFacing West";
+        isBlocked = true;
     }
-
-    return false;
+    return isBlocked;
 }
 
 void Bug::print() {
