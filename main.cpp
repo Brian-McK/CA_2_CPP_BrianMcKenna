@@ -8,8 +8,6 @@
 #include <string>       // getline(), stoi(), stod()
 #include <sstream>      // string stream
 
-// TODO - FIX THE MENU
-// TODO - FIX THE DISPLAY OUTPUT LIKE THE BRIEF
 // TODO - SET THE PATH FOR EACH BUG
 
 vector<Bug*> bugs;
@@ -20,29 +18,13 @@ void parseLine(const string& str);
 void DemoInputFileStream(const string& fileName);
 void displayAllBugs(vector<Bug*> bugVector);
 void findBug(int findId, vector<Bug*> bugVector);
+void tapBoard(vector<Bug*> bugVector);
 
 using namespace std;
 
 int main() {
 
-//    menu();
-
-    Hopper myHopper;
-    myHopper.setId(1234); // Unique integer ID value (e.g. 101,102,... etc.)
-    myHopper.setPosition(pair<int, int>(0,0)); // (X,Y) coordinate system where (0,0) is top left hand cell
-    myHopper.setDirection(1); // Direction values : 1=North, 2=East, 3=South, 4=West (or use enum)
-    myHopper.setSize(1); // Measure of bug size (1-20), bigger bugs eat smaller bugs and grow accordingly
-    myHopper.setAlive(true); // Flag indicating life status of a bug. All bugs set to ‘true’ initially. When eaten, this flag is set to ‘false’.
-    myHopper.setHopLength(4); //
-    // myHopper.setPath() // history of what positions on the board the bug has been, dont need yet
-
-    myHopper.move();
-
-//    DemoInputFileStream("bugs.txt");
-//
-//    displayAllBugs(bugs);
-//
-//    findBug(103,bugs);
+    menu();
 
     return 0;
 }
@@ -61,15 +43,22 @@ void menu()
         switch (selection) {
             case 1:
                 cout << "1) - Initialize Bug Board (load data from file)\n";
+                DemoInputFileStream("bugs.txt");
                 break;
             case 2:
                 cout << "2) - Display all Bugs\n";
+                displayAllBugs(bugs);
                 break;
             case 3:
+                int bugId;
                 cout << "Find a Bug (given an id)\n";
+                cout << "Enter bug id: " << endl;
+                cin >> bugId;
+                findBug(bugId, bugs);
                 break;
             case 4:
                 cout << "Tap the Bug Board (causes move all, then fight/eat)\n";
+                tapBoard(bugs);
                 break;
             case 5:
                 cout << "Display Life History of all Bugs (path taken)\n";
@@ -198,5 +187,15 @@ void menuOptions()
     cout << "\n5) - Display Life History of all Bugs (path taken)";
     cout << "\n6) - Display all Cells listing their Bugs";
     cout << "\n7) - Exit (write Life History of all Bugs to file)";
+}
+
+void tapBoard(vector<Bug*> bugVector)
+{
+    cout << "TAP THE BOARD" << endl;
+
+    for (auto &i: bugVector){
+        i->move();
+    }
+    displayAllBugs(bugVector);
 }
 

@@ -17,7 +17,7 @@ Bug::Bug(int id, const pair<int, int> &position, int direction, int size, bool a
     this->direction = direction;
     this->size = size;
     this->alive = alive;
-    this->path = path;
+    this->path.push_back(position);
 }
 
 int Bug::getId() const {

@@ -18,8 +18,11 @@ Hopper::Hopper(int id, const pair<int, int> &position, int direction, int size, 
 void Hopper::move() {
 
     // before I set the move I need to check if the way is blocked
+    // if the way is blocked set a new direction that doesnt include the current direction, then call move
     // if the way is not blocked I then set the new position with the hopLength
     // if the new position is greater or equal I then need to set to the edge of the board
+
+    list<pair<int, int>> pathHistory;
 
     if(!this->isWayBlocked())
     {
@@ -60,11 +63,17 @@ void Hopper::move() {
             }
         }
         cout << "\nMoving the Hopper...Done Moving." << endl;
+
+        pathHistory.push_back(this->getPosition());
+        this->setPath(pathHistory);
         this->print();
     }
     else
     {
         cout << "\nThe way is blocked, generating new random direction" << endl;
+
+        srand(time(0));
+
         int newDirection = (rand() % 4) + 1;
         while (newDirection == this->getDirection())
         {
@@ -73,7 +82,7 @@ void Hopper::move() {
         cout << "New random direction: " << newDirection << endl;
 
         this->setDirection(newDirection);
-
+        // TODO - SET THE PATH HISTORY
         this->move();
     }
 }
