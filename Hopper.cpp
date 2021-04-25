@@ -4,6 +4,9 @@
 
 #include "Hopper.h"
 #include <iostream>
+#include <cstdlib>
+#include <ctime>
+
 using namespace std;
 
 Hopper::Hopper(int id, const pair<int, int> &position, int direction, int size, bool alive,
@@ -20,15 +23,10 @@ void Hopper::move() {
 
     if(!this->isWayBlocked())
     {
-        cout << "\nThe way is not blocked" << endl;
-
-        // TODO - SET A NEW DIRECTION IF AT EDGE OF BOARD AND CANT MOVE THAT WAY
-
         if(this->getDirection() == 1) // north
         {
             if(this->getPosition().second - this->getHopLength() <= 0)
             {
-                // TODO - set new random direction - random number between 1 & 4 but not including the current direction
                 this->setPosition(pair<int, int>(this->getPosition().first,0));
             } else {
                 this->setPosition(pair<int, int>(this->getPosition().first,(this->getPosition().second - this->hopLength)));
@@ -61,12 +59,23 @@ void Hopper::move() {
                 this->setPosition(pair<int, int>((this->getPosition().first - this->hopLength),this->getPosition().second));
             }
         }
+        cout << "\nMoving the Hopper...Done Moving." << endl;
+        this->print();
     }
     else
     {
-        cout << "\nThe way is blocked" << endl;
+        cout << "\nThe way is blocked, generating new random direction" << endl;
+        int newDirection = (rand() % 4) + 1;
+        while (newDirection == this->getDirection())
+        {
+            newDirection = 1 + rand() % 4;
+        }
+        cout << "New random direction: " << newDirection << endl;
+
+        this->setDirection(newDirection);
+
+        this->move();
     }
-    cout << "\nMoving the Hopper...Done Moving." << endl;
 }
 
 Hopper::~Hopper() {

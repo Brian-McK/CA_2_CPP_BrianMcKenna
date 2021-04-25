@@ -29,18 +29,14 @@ int main() {
 
     Hopper myHopper;
     myHopper.setId(1234); // Unique integer ID value (e.g. 101,102,... etc.)
-    myHopper.setPosition(pair<int, int>(7,5)); // (X,Y) coordinate system where (0,0) is top left hand cell
-    myHopper.setDirection(4); // Direction values : 1=North, 2=East, 3=South, 4=West (or use enum)
+    myHopper.setPosition(pair<int, int>(0,0)); // (X,Y) coordinate system where (0,0) is top left hand cell
+    myHopper.setDirection(1); // Direction values : 1=North, 2=East, 3=South, 4=West (or use enum)
     myHopper.setSize(1); // Measure of bug size (1-20), bigger bugs eat smaller bugs and grow accordingly
     myHopper.setAlive(true); // Flag indicating life status of a bug. All bugs set to ‘true’ initially. When eaten, this flag is set to ‘false’.
     myHopper.setHopLength(4); //
     // myHopper.setPath() // history of what positions on the board the bug has been, dont need yet
 
-    myHopper.print();
-
     myHopper.move();
-
-    myHopper.print();
 
 //    DemoInputFileStream("bugs.txt");
 //
